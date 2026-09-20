@@ -6,8 +6,9 @@ from pypdf import PdfReader
 def main():
     load_dotenv(override=True)  # Load environment variables from .env file
 
-    com_reader= PdfReader(r"C:\Users\OMEN\Desktop\Ai_Specialist_ecommerce_service\company overview\ecommerce_company_overview.pdf")
-    text=""
+    com_reader = PdfReader(
+    "company overview/ecommerce_company_overview.pdf")
+    
     for page in com_reader.pages:
         text_page=page.extract_text()
         text+=f"{text_page} \n\n" 
